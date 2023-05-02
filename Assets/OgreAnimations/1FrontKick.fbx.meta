@@ -73,6 +73,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.47351855
+        functionName: Hit
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 62ef79c246b3ab84893a77308c233149,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

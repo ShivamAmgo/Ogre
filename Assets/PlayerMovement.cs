@@ -12,9 +12,11 @@ public class PlayerMovement : MonoBehaviour
     float Mouse_Y = 0;
     public delegate void DeliverPlayer(PlayerMovement Player);
     public static event DeliverPlayer OnDeliverPlayerInfo;
+    Animator PlayerAnim;
     void Start()
     {
         OnDeliverPlayerInfo?.Invoke(this);
+        PlayerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,9 +25,12 @@ public class PlayerMovement : MonoBehaviour
         XInput = Input.GetAxis("Horizontal");
         YInput = Input.GetAxis("Vertical");
         Mouse_x = Input.GetAxis("Mouse X");
+        PlayerAnim.SetFloat("Xmove", XInput);
+        PlayerAnim.SetFloat("Ymove", YInput);
         //Mouse_Y= Input.GetAxis("Mouse Y");
 
     }
+    
     private void FixedUpdate()
     {
         transform.position += (transform.right * XInput + transform.forward * YInput) * Time.deltaTime * MovementSpeed;

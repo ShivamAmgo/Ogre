@@ -46,6 +46,7 @@ public class OgreAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Target==null)return;
         TargetDistance = Vector3.Distance(transform.position, Target.position);
         //Debug.Log(m_enemystate + "  " + TargetDistance);
         if (m_enemystate == EnemyState.Idle)
