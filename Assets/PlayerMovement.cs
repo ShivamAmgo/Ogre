@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float YInput = 0;
     float Mouse_x = 0;
     float Mouse_Y = 0;
+    float DefAultSpeed;
     public delegate void DeliverPlayer(PlayerMovement Player);
     public static event DeliverPlayer OnDeliverPlayerInfo;
     Animator PlayerAnim;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         OnDeliverPlayerInfo?.Invoke(this);
         PlayerAnim = GetComponent<Animator>();
+        DefAultSpeed = MovementSpeed;
     }
 
     // Update is called once per frame
@@ -35,5 +37,13 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position += (transform.right * XInput + transform.forward * YInput) * Time.deltaTime * MovementSpeed;
         transform.eulerAngles += Vector3.up * Mouse_x * Time.deltaTime * RotateSpeed;
+    }
+    public void SetPlayerSpeed(float Speed)
+    {
+        MovementSpeed = Speed;
+    }
+    public void ResetSpeed()
+    {
+        MovementSpeed = DefAultSpeed;
     }
 }

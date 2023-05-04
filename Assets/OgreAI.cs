@@ -86,6 +86,10 @@ public class OgreAI : MonoBehaviour
             m_enemystate = EnemyState.Chase;
             //Enemyanim.SetTrigger("WalkForward");
         }
+        else if (TargetDistance > AttackDistance)
+        {
+            m_enemystate = EnemyState.Chase;
+        }
     }
     void Chase()
     {
