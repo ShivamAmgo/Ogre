@@ -34,13 +34,17 @@ public class OgreAI : MonoBehaviour
     bool IsChasing = false;
     string PreviousAttack="";
     //AnimatorStateInfo PreviousAnimation;
+    public delegate void DeliverEnemyInfo(Transform Enemy);
+    public static event DeliverEnemyInfo OnDeliverEnemy;
     void Start()
     {
+
         Target = GameObject.FindGameObjectWithTag("Player").transform;
         TargetDistance = Vector3.Distance(transform.position, Target.position);
         fxManagerOgre.SetPlayer(Target);
         //Enemyanim.SetTrigger("Idle");
         m_enemystate = EnemyState.Idle;
+        OnDeliverEnemy?.Invoke(transform);
     }
 
     // Update is called once per frame

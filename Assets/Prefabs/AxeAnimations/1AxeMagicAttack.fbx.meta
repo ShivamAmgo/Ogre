@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f94585a68f1bee4cb88dbb3420ea99c
+guid: ee0fd1b143383f946b5a0a4a6ebd82fd
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -19,7 +19,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'head_neck_upper'
-      : rotation error = 1.607250 deg\n"
+      : rotation error = 2.154439 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -38,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: BattleCry
+      name: AxeMagicAttack
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 85
+      lastFrame: 237
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,18 +62,18 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.15826185
-        functionName: UltimateFX
+      - time: 0.101296574
+        functionName: ChargeAxeFxPlay
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: bb21b9934e8555449a40d8abe91df48e,
           type: 3}
         floatParameter: 0
-        intParameter: 1
+        intParameter: 0
         messageOptions: 0
-      - time: 0.86351836
-        functionName: SetcanAttackTrue
+      - time: 0.5565294
+        functionName: MagicAttackFxAnimationPlay
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: e3ded516dfb02d84c9d553c9d06c4554,
+        objectReferenceParameter: {fileID: 11500000, guid: bb21b9934e8555449a40d8abe91df48e,
           type: 3}
         floatParameter: 0
         intParameter: 0
