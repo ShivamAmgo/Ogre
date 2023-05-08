@@ -10,6 +10,7 @@ public class Damage : MonoBehaviour
     [SerializeField] List<string> DamageHitTriggers;
     [SerializeField] Animator m_animator;
     [SerializeField] ComboMaker m_comboMaker;
+    [SerializeField] FxManagerGow m_FxmanagerGow;
     bool CanTakeDamage = true;
     float CurrentHealth;
     void Start()
@@ -54,6 +55,7 @@ public class Damage : MonoBehaviour
     }
     void PlayHitAnimation()
     {
+        m_FxmanagerGow.DisableFxOnDamage();
         int random = Random.Range(0, DamageHitTriggers.Count);
         m_animator.SetTrigger(DamageHitTriggers[random]+"");
         m_comboMaker.SetcanAttackTrue();

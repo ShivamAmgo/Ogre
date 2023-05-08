@@ -17,6 +17,7 @@ public class FxManagerGow : MonoBehaviour
     [SerializeField] float AxeLightningStrikeTravelDuration = 1;
     [SerializeField] float AxeLightningFXFrequency = 0.25f;
     [SerializeField] GameObject[] MagicAttackFxs;
+    
     //[SerializeField] GameObject AxeMagicFX;
     
     bool IsAxeLightningFxActive = false;
@@ -115,5 +116,9 @@ public class FxManagerGow : MonoBehaviour
     public void PlayMagicAttackAnimation()
     {
         MagicAXeAttack();
+    }
+    public void DisableFxOnDamage()
+    {
+        AxeChargeFX.SetActive(false);
     }
 }
