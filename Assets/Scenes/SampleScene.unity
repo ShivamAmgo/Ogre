@@ -1781,6 +1781,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 5
   RotateSpeed: 100
+--- !u!114 &1609707338 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1439610478, guid: b266effa683744f4cb5e9f8238bf65f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4388191462853452264}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb21b9934e8555449a40d8abe91df48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1673209191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3627,6 +3639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1439610477, guid: b266effa683744f4cb5e9f8238bf65f5, type: 3}
+      propertyPath: m_FxmanagerGow
+      value: 
+      objectReference: {fileID: 1609707338}
     - target: {fileID: 3469061659892641496, guid: b266effa683744f4cb5e9f8238bf65f5,
         type: 3}
       propertyPath: m_Name
